@@ -1,0 +1,1624 @@
+/* ==========================================
+   DocLink India - Professional CSS
+   Part 1
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f8ff;
+    color:#222;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+/* Variables */
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#0ea5e9;
+    --dark:#111827;
+    --light:#ffffff;
+    --text:#374151;
+    --border:#e5e7eb;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+/* Header */
+
+.header{
+
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+
+    background:#ffffffdd;
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.header .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+/* Logo */
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+
+    color:var(--dark);
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.logo i{
+
+    color:var(--primary);
+    margin-right:8px;
+
+}
+
+/* Navbar */
+
+.navbar ul{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:var(--primary);
+
+}
+
+/* Right Menu */
+
+.nav-right{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+#darkModeBtn,
+.menu-btn{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#darkModeBtn:hover,
+.menu-btn:hover{
+
+    background:var(--primary);
+    color:#fff;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+}
+
+/* Hero */
+
+.hero{
+
+    padding-top:130px;
+    padding-bottom:80px;
+
+}
+
+.hero-grid{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+/* Badge */
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#dbeafe;
+
+    color:var(--primary);
+
+    border-radius:50px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+/* Heading */
+
+.hero h1{
+
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+
+    color:var(--dark);
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+/* Paragraph */
+
+.hero p{
+
+    color:var(--text);
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+/* Search Box */
+
+.search-box{
+
+    display:flex;
+
+    background:#fff;
+
+    border-radius:60px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:35px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:18px 25px;
+
+    font-size:16px;
+
+}
+
+.search-box button{
+
+    width:70px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 28px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.primary:hover{
+
+    background:#1d4ed8;
+
+}
+
+.secondary{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.secondary:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* Hero Image */
+
+.hero-right img{
+
+    width:100%;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Section */
+
+section{
+
+    padding:80px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+    margin-bottom:10px;
+
+}
+
+.section-title p{
+
+    color:#666;
+
+}
+/* ==========================================
+   DocLink India - Professional CSS
+   Part 2
+========================================== */
+
+/* ===============================
+   Popular Services
+================================ */
+
+.popular{
+    background:#eef5ff;
+}
+
+.popular-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.popular-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    border:1px solid #e8eefc;
+
+}
+
+.popular-card:hover{
+
+    transform:translateY(-10px);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.popular-card i{
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.popular-card:hover i{
+
+    color:#fff;
+
+}
+
+.popular-card h3{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   Documents Section
+================================ */
+
+.documents{
+
+    background:#f7f9ff;
+
+}
+
+.document-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===============================
+   Document Card
+================================ */
+
+.document-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    border:1px solid #e6ebf5;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.document-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.document-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.18);
+
+}
+
+/* ===============================
+   Document Icon
+================================ */
+
+.doc-icon{
+
+    width:85px;
+    height:85px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#eaf2ff;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.doc-icon i{
+
+    font-size:38px;
+
+    color:var(--primary);
+
+}
+
+.document-card:hover .doc-icon{
+
+    background:var(--primary);
+
+}
+
+.document-card:hover .doc-icon i{
+
+    color:#fff;
+
+}
+
+/* ===============================
+   Card Heading
+================================ */
+
+.document-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    color:#111827;
+
+}
+
+/* ===============================
+   Card Paragraph
+================================ */
+
+.document-card p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+/* ===============================
+   Card Buttons
+================================ */
+
+.card-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.card-buttons .btn{
+
+    padding:12px 18px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.card-buttons .primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.card-buttons .primary:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===============================
+   Badge
+================================ */
+
+.document-card .official{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   Search Highlight
+================================ */
+
+.highlight{
+
+    color:#2563eb;
+
+    font-weight:700;
+
+}
+
+/* ===============================
+   Small Animation
+================================ */
+
+.document-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+   DocLink India - Professional CSS
+   Part 3
+==========================================*/
+
+/* ===============================
+   FAQ Section
+================================ */
+
+.faq{
+    background:#eef5ff;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:#fff;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    border-left:5px solid var(--primary);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform:translateY(-5px);
+}
+
+.faq-item h3{
+    margin-bottom:12px;
+    color:var(--primary);
+    font-size:20px;
+}
+
+.faq-item p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ===============================
+   Contact
+================================ */
+
+.contact{
+    background:#ffffff;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.contact-form textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* ===============================
+   Footer
+================================ */
+
+footer{
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:70px 0 20px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:35px;
+
+}
+
+.footer-grid h3,
+.footer-grid h4{
+
+    margin-bottom:18px;
+
+}
+
+.footer-grid p{
+
+    color:#d1d5db;
+
+    line-height:1.8;
+
+}
+
+.footer-grid ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid ul li a{
+
+    color:#d1d5db;
+
+    transition:.3s;
+
+}
+
+.footer-grid ul li a:hover{
+
+    color:#60a5fa;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:#1f2937;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding-top:20px;
+
+    color:#cbd5e1;
+
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media(max-width:992px){
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero-right{
+
+    order:-1;
+
+}
+
+.navbar{
+
+    display:none;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.search-box{
+
+    flex-direction:column;
+
+    border-radius:15px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+}
+
+.search-box button{
+
+    width:100%;
+
+    padding:16px;
+
+}
+
+.document-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.popular-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.hero{
+
+    padding-top:100px;
+
+}
+
+.hero h1{
+
+    font-size:28px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.popular-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.document-card{
+
+    padding:22px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.card-buttons{
+
+    flex-direction:column;
+
+}
+
+}
+/* ==========================================
+   DocLink India - Professional CSS
+   Part 4 (Final)
+==========================================*/
+
+/* ===============================
+   Dark Mode
+================================ */
+
+body.dark{
+
+    background:#0f172a;
+    color:#f8fafc;
+
+}
+
+body.dark .header{
+
+    background:#111827ee;
+
+}
+
+body.dark .logo{
+
+    color:#fff;
+
+}
+
+body.dark .navbar a{
+
+    color:#f1f5f9;
+
+}
+
+body.dark .hero p,
+body.dark .section-title p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .hero h1,
+body.dark h2,
+body.dark h3{
+
+    color:#fff;
+
+}
+
+body.dark .popular{
+
+    background:#111827;
+
+}
+
+body.dark .documents{
+
+    background:#0f172a;
+
+}
+
+body.dark .popular-card,
+body.dark .document-card,
+body.dark .faq-item,
+body.dark .contact-form input,
+body.dark .contact-form textarea{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    border-color:#334155;
+
+}
+
+body.dark .document-card p,
+body.dark .faq-item p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .search-box{
+
+    background:#1e293b;
+
+}
+
+body.dark .search-box input{
+
+    background:transparent;
+
+    color:#fff;
+
+}
+
+body.dark footer{
+
+    background:#020617;
+
+}
+
+/* ===============================
+   Custom Scrollbar
+================================ */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===============================
+   Image Hover
+================================ */
+
+.hero-right img{
+
+    transition:.5s;
+
+}
+
+.hero-right img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===============================
+   Glass Effect
+================================ */
+
+.glass{
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* ===============================
+   Scroll To Top
+================================ */
+
+#scrollTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ===============================
+   Loading Animation
+================================ */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader::after{
+
+    content:"";
+
+    width:60px;
+
+    height:60px;
+
+    border:6px solid #dbeafe;
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===============================
+   Card Hover Glow
+================================ */
+
+.document-card:hover{
+
+    box-shadow:
+    0 20px 45px rgba(37,99,235,.18),
+    0 0 0 1px rgba(37,99,235,.1);
+
+}
+
+/* ===============================
+   Button Ripple Effect
+================================ */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:translate(-50%,-50%);
+
+    transition:.45s;
+
+}
+
+.btn:hover::after{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+/* ===============================
+   Fade Animation
+================================ */
+
+.fade{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===============================
+   Selection Color
+================================ */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===============================
+   Smooth Transition
+================================ */
+
+*{
+
+    transition:
+    background .3s,
+    color .3s,
+    border-color .3s,
+    box-shadow .3s;
+
+}
+/* Mobile Menu */
+
+@media(max-width:992px){
+
+    .navbar{
+
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#fff;
+        display:none;
+        padding:20px;
+
+    }
+
+    body.dark .navbar{
+
+        background:#111827;
+
+    }
+
+    .navbar.active{
+
+        display:block;
+
+    }
+
+    .navbar ul{
+
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+
+    }
+
+}
+/* Active Navigation */
+
+.navbar a.active{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+/* Favourite Button */
+
+.fav-btn,
+.copy-btn,
+.share-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    margin:8px 5px 0;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.fav-btn:hover,
+.copy-btn:hover,
+.share-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+/* Toast */
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:14px 24px;
+
+    border-radius:8px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:99999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+/* Progress Bar */
+
+#progressBar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+
+    height:4px;
+
+    background:#2563eb;
+
+    z-index:99999;
+
+}
+
+/* Counter */
+
+.doc-counter{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#2563eb;
+
+}
